@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "AI Memory Coach",
+  "version": "1.0",
+  "description": "Track your learning and remember what matters",
+  
+  "permissions": [
+    "activeTab",
+    "storage",
+    "tabs"
+  ],
+  
+  "background": {
+    "service_worker": "background.js"
+  },
+  
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "AI Memory Coach"
+  }
+}
